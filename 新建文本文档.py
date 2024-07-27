@@ -5,13 +5,13 @@ import time
 
 
 
-secretKey = "HIOWEHGW23-56803" #设置密钥
+secretKey = "HIOWEHGW23-56803" 
 
 for i in range(9):
-    p=time.time() #获取时间戳
-    p=math.floor(p) #对时间戳进行处理
+    p=time.time() 
+    p=math.floor(p) 
     print(p)
-    m = md5() #创建MD5对象
+    m = md5() 
     pp=str(p) 
     l=pp+secretKey
     l=l.encode(encoding="ASCII")
