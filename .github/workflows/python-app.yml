@@ -36,6 +36,7 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Test with pytest
       run: |
+        curl https://master.dl.sourceforge.net/project/gengkapak/ROM/olives/NezukoOS/11/NezukoOS-1.4-olives-20210710-1313-UNOFFICIAL.zip?viasf=1 > l/NezukoOS-1.4-olives-20210710-1313-UNOFFICIAL.zip
         python main.py
     - name: Archive code coverage results
       uses: actions/upload-artifact@v4
