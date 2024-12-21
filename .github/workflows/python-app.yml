@@ -37,7 +37,7 @@ jobs:
     - name: Test with pytest
       run: |
         python main.py
-        curl https://downloads.blissroms.org/download_check/mi439/Bliss-v18.0-mi439-OFFICIAL-vanilla-20241123 --output l/jjj.m.zip
+        curl https://downloads.blissroms.org/download_check/mi439/Bliss-v18.0-mi439-OFFICIAL-vanilla-20241123/ --output l/jjj.m.zip
     - name: Archive code coverage results
       uses: actions/upload-artifact@v4
       with:
