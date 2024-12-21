@@ -20,8 +20,11 @@ for i in range(9):
     token=m.hexdigest()
     params1={'timestamp':p,'token':token}
     print(params1)
-    x = requests.get('https://box.fiime.cn/random/random.php',params={'timestamp':p,'token':token},stream=True)
-    m=open('l//'+pp+".png",'wb')
-    m.write(x.content)
-    m.close()
+    try:
+        x = requests.get('https://box.fiime.cn/random/random.php',params={'timestamp':p,'token':token},stream=True)
+        m=open('l//'+pp+".png",'wb')
+        m.write(x.content)
+        m.close()
+    except:
+        print('bug')
     time.sleep(5)
